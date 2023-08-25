@@ -1,11 +1,11 @@
-About quacc
-===========
+About quacc-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/quacc-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/arosen93/quacc
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/quacc-feedstock/blob/main/LICENSE.txt)
 
 Summary: Enhance ASE for high-throughput DFT
 
