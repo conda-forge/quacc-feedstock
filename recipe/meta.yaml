@@ -20,13 +20,14 @@ requirements:
     - python >=3.10
   run:
     - ase >=3.22.1
-    - atomate2 ==0.0.6
-    - cclib ==1.7.1
-    - custodian ==2022.2.13
-    - fireworks ==2.0.2
-    - jobflow ==0.1.6
-    - monty ==2022.1.19
-    - pymatgen ==2022.2.10
+    - cclib =1.8
+    - custodian =2022.7.22
+    - emmet-core =0.66.0
+    - maggma =0.53.1
+    - monty =2023.8.8
+    - numpy =1.25.2
+    - pydantic =1.10.2
+    - pymatgen =2023.8.10
     - python >=3.10
 
 test:
