@@ -21,7 +21,7 @@ requirements:
   run:
     - ase >=3.22.1
     - cclib =1.8
-    - custodian =2023.7.22
+    - custodian =2023.9.2
     - emmet-core =0.66.0
     - maggma =0.53.1
     - monty =2023.8.8
@@ -29,6 +29,7 @@ requirements:
     - pydantic =1.10.2
     - pymatgen =2023.8.10
     - python >=3.10
+    - typer
 
 test:
   imports:
