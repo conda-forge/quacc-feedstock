@@ -21,13 +21,13 @@ requirements:
   run:
     - ase >=3.22.1
     - cclib =1.8
-    - custodian =2023.9.2
+    - custodian =2023.7.22
     - emmet-core =0.66.0
     - maggma =0.53.1
     - monty =2023.8.8
     - numpy =1.25.2
     - pydantic =1.10.2
-    - pymatgen =2023.8.10
+    - pymatgen =2023.9.2
     - python >=3.10
     - typer
 
