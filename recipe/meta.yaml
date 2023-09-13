@@ -1,5 +1,5 @@
 {% set name = "quacc" %}
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quacc-{{ version }}.tar.gz
-  sha256: 11d0c7cf031d23fe482af990af6a4b51c533080309affa112079be9ece9d2aae
+  sha256: 586836ccf8892ae2951da2eca8c56381b4d41b53adaf65c70906c0b8118a872a
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - custodian =2023.7.22
     - emmet-core =0.66.0
     - maggma =0.53.1
-    - monty =2023.8.8
+    - monty >=2023.9.5
     - numpy =1.25.2
     - pydantic =1.10.2
     - pymatgen >=2023.9.2
