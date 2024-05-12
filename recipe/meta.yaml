@@ -1,5 +1,5 @@
 {% set name = "quacc" %}
-{% set version = "0.2.7" %}
+{% set version = "0.2.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quacc-{{ version }}.tar.gz
-  sha256: 6bccec1e3138d92cb36f60d445a548f8c34f98012cf539b000d51e7e27ac7f40
+  sha256: ad2319e1d93ef3fa5f0a9bcc7da3ba83a12896c94fbd12a927e7e7f68d0de74d
 
 build:
   noarch: python
@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.10
+    - python <3.12,>=3.9
   run:
     - ase >=3.22.1
     - cclib =1.8
@@ -28,7 +28,7 @@ requirements:
     - numpy =1.25.2
     - pydantic =1.10.2
     - pymatgen >=2023.9.2
-    - python >=3.10
+    - python <3.12,>=3.9
     - typer
 
 test:
