@@ -1,47 +1,53 @@
 {% set name = "quacc" %}
-{% set version = "0.2.7" %}
+{% set version = "0.11.7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quacc-{{ version }}.tar.gz
-  sha256: 6bccec1e3138d92cb36f60d445a548f8c34f98012cf539b000d51e7e27ac7f40
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quacc-{{ version }}.tar.gz
+  sha256: 7f1e9221f005ac8fd124dded1af3e8a81d2a7dba8e774a0ec2ed380a118c2066
 
 build:
+  entry_points:
+    - quacc = quacc._cli.quacc:app
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
+    - python >=3.10
+    - setuptools
     - pip
-    - python >=3.10
   run:
-    - ase >=3.22.1
-    - cclib =1.8
-    - custodian =2023.7.22
-    - emmet-core =0.66.0
-    - maggma =0.53.1
-    - monty >=2023.9.5
-    - numpy =1.25.2
-    - pydantic =1.10.2
-    - pymatgen >=2023.9.2
     - python >=3.10
-    - typer
+    - ase >=3.23.0
+    - custodian >=2024.3.12
+    - emmet-core >=0.80.0
+    - maggma >=0.64.0
+    - monty >=2024.5.15
+    - numpy >=1.25.0
+    - psutil
+    - pydantic >=2.0.1
+    - pydantic-settings >=2.2.0
+    - pymatgen >=2024.5.31
+    - ruamel.yaml >=0.17.40
+    - typer >=0.12.1
 
 test:
   imports:
     - quacc
   commands:
     - pip check
+    - quacc --help
   requires:
     - pip
 
 about:
-  home: https://github.com/arosen93/quacc
-  summary: Enhance ASE for high-throughput DFT
+  home: https://github.com/Quantum-Accelerators/quacc
+  summary: A platform to enable high-throughput, database-driven quantum chemistry and computational materials science
   license: BSD-3-Clause
   license_file: LICENSE.md
 
