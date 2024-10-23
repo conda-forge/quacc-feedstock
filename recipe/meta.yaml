@@ -17,6 +17,7 @@ build:
 requirements:
   host:
     - pip
+    - setuptools
     - python <3.12,>=3.9
   run:
     - ase >=3.22.1
