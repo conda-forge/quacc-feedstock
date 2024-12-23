@@ -25,14 +25,14 @@ requirements:
     - python >=3.10
     - ase >=3.23.0
     - custodian >=2024.3.12
-    - emmet-core >=0.80.0
+    - emmet-core >=0.84.3rc6
     - maggma >=0.64.0
     - monty >=2024.5.15
     - numpy >=1.25.0
     - psutil
     - pydantic >=2.0.1
     - pydantic-settings >=2.2.0
-    - pymatgen >=2024.5.31
+    - pymatgen >=2024.10.22
     - ruamel.yaml >=0.17.40
     - typer >=0.12.1
 
