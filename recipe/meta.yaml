@@ -1,5 +1,5 @@
 {% set name = "quacc" %}
-{% set version = "0.11.13" %}
+{% set version = "0.11.14" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quacc-{{ version }}.tar.gz
-  sha256: ded2fe7af619105872233a82fa69b1550d3aec9353a67e2866d2d7854a71f389
+  sha256: 376f0937ae8aa2770fd517cf405e4ece0cc3c50e4191cbf2f05e0fa388a8bf55
 
 build:
   entry_points:
@@ -36,6 +36,7 @@ requirements:
     - pymatgen >=2024.10.22
     - ruamel.yaml >=0.17.40
     - typer >=0.12.1
+    - pymongo <=4.10.1
 
 test:
   imports:
