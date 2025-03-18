@@ -1,5 +1,5 @@
 {% set name = "quacc" %}
-{% set version = "0.12.3" %}
+{% set version = "0.13.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quacc-{{ version }}.tar.gz
-  sha256: 712517c881899508574f2e2e825595a38d233bb9d6e63a0fe806fbe03103e8d8
+  sha256: e144c204ee518b01890f7f7e23ec1df96f8d6087cf255322156bd32a1e6fe2fa
 
 build:
   entry_points:
@@ -37,6 +37,7 @@ requirements:
     - ruamel.yaml >=0.17.40
     - typer >=0.12.1
     - pymongo <=4.10.1
+    - frozendict
 
 test:
   imports:
