@@ -1,5 +1,5 @@
 {% set name = "quacc" %}
-{% set version = "0.13.0" %}
+{% set version = "0.14.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quacc-{{ version }}.tar.gz
-  sha256: e144c204ee518b01890f7f7e23ec1df96f8d6087cf255322156bd32a1e6fe2fa
+  sha256: 9ffe0cb3368c2b1feb61f7c1801e45ba8a3ebd9a15b9abaa0fbbff1cb4a01d7d
 
 build:
   entry_points:
@@ -26,7 +26,7 @@ requirements:
     - python >={{ python_min }}
     - ase >=3.23.0
     - custodian >=2024.3.12
-    - emmet-core >=0.84.3rc6
+    - emmet-core >=0.84.6
     - maggma >=0.64.0
     - monty >=2024.5.15
     - numpy >=1.25.0
