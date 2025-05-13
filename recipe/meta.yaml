@@ -25,7 +25,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - ase >=3.23.0
-    - custodian >=2024.3.12
+    - custodian >=2025.5.12
     - emmet-core >=0.84.6
     - maggma >=0.64.0
     - monty >=2024.5.15
@@ -38,6 +38,7 @@ requirements:
     - typer >=0.12.1
     - pymongo <=4.10.1
     - frozendict
+    - click <8.2
 
 test:
   imports:
