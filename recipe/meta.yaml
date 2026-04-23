@@ -1,5 +1,5 @@
 {% set name = "quacc" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quacc-{{ version }}.tar.gz
-  sha256: 49643dcc315669ed3c13e548a2c80f152f9355aea4c5c382e1b4765ae081f1d6
+  sha256: 110a11e15493363ef7048590ad9197ed6101512a0bd77ad7be0d36f0fe0b2ea6
 
 build:
   entry_points:
