@@ -1,29 +1,33 @@
-{% set name = "quacc" %}
-{% set version = "1.2.6" %}
-{% set python_min = "3.11" %}
+schema_version: 1
+
+context:
+  name: quacc
+  version: 1.2.6
+  python_min: "3.11"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quacc-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/quacc-${{ version }}.tar.gz
   sha256: d93d97f6a6c425675e7b3185b477890d5b7bea84a07b3d7277bb63d037e666b5
 
 build:
-  entry_points:
-    - quacc = quacc._cli.quacc:app
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - quacc = quacc._cli.quacc:app
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools
     - pip
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - ase >=3.23.0
     - custodian >=2025.12.14
     - emmet-core >=0.84.6
@@ -40,21 +44,24 @@ requirements:
     - frozendict
     - click <8.2
 
-test:
-  imports:
-    - quacc
-  commands:
-    - pip check
-    - quacc --help
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - quacc
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - quacc --help
 
 about:
-  home: https://github.com/Quantum-Accelerators/quacc
   summary: A platform to enable high-throughput, database-driven quantum chemistry and computational materials science
   license: BSD-3-Clause
   license_file: LICENSE.md
+  homepage: https://github.com/Quantum-Accelerators/quacc
 
 extra:
   recipe-maintainers:
