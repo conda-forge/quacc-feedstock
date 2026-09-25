@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: quacc
-  version: "1.5.12"
+  version: "1.5.13"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/quacc-${{ version }}.tar.gz
-  sha256: c347e31e514eae170847a82323ca121b64a6921ebee7a3ae1dab30f4615c040c
+  sha256: a11e31a60dbc889de9e261131664506e0cf025f33754923bb73cbbaf7bf01197
 
 build:
   number: 0
